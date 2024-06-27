@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Playfair';
+    src: url('./Fonts/PlayfairDisplay-VariableFont_wght.ttf');
+    font-display: auto;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair';
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-image: url('img/mapa.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+.conjunto {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app {
+    width: 450px;
+    margin: auto;
+    max-width: 100%;
+    border: 1px solid #96918d;
+    border-radius: 15px;
+    padding: 0 2rem 2rem 2rem;
+    margin-top: 2rem;
+    background-color: #f3ede8;
+    margin-bottom: 2rem;
+    flex: 1 0 auto;
+}
+
+.wish-input {
+    border: 1px solid #8b735b;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.wish-input__label {
+    color: #8b735b;
+}
+
+.wish-input_field {
+    width: 100%;
+    border: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #f3ede8;
+}
+
+.wish-list {
+    list-style: none;
+    padding: 0;
+}
+
+.wish-list__item {
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    color: #8b735b;
+    border-bottom: 1px solid #8b735b;
+    padding: 0.5rem 0;
+}
+
+.wish-list__item input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.wish-list__item--done label {
+    text-decoration: line-through;
+    color: black;
+}
+
+.wish-list__item--warning label {
+    color: #ffa500;
+}
+
+.wish-list__item--danger label {
+    color: #ff0000;
+}
+
+.wish-list__item-flag-separator {
+    margin: 0 0.5rem;
+    color: transparent;
+}
+
+.wish-clear {
+    width: 100%;
+    padding: 0.5rem;
+    background: #fff;
+    font-size: 1rem;
+    border: 1px solid #8b735b;
+    border-radius: 3px;
+    color: #8b735b;
+    cursor: pointer;
+    transition:
+        background 0.3s,
+        color 0.3s;
+}
+
+.wish-clear:hover {
+    background: #8b735b;
+    color: #fff;
+}
+
+/*:::::Pie de Pagina*/
+.footer{
+    flex-shrink: 0;
+}
+
+.pie-pagina {
+    background-color: #0a141d;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding-left: 50px;
+}
+.pie-pagina .grupo-1 .box figure {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a img {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    margin: 0px 20px 25px 0px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+}
+.pie-pagina .grupo-2 {
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+.enlaces a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.enlaces{
+    padding-bottom: 20px;
+}

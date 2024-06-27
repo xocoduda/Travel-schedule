@@ -1,0 +1,71 @@
+{
+  "name": "react-course-wishlist",
+  "version": "1.0.0",
+  "description": "An exercise for an introduction to React",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html --open",
+    "lint": "eslint --fix src/**/*.{js,jsx}",
+    "format": "prettier --write \"*.{js,jsx,json,css}\""
+  },
+  "keywords": [
+    "parcel",
+    "react"
+  ],
+  "author": "Alvaro Yuste (alvaroyuste.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.7",
+    "classnames": "^2.5.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "husky": "^9.0.7",
+    "lint-staged": "^15.2.1",
+    "prettier": "^3.2.4",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "parcel-bundler": "^1.12.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint"
+    ],
+    "src/**/*.{js,jsx,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "linebreak-style": "off"
+    }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "semi": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlvYuste/react-course-wishlist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlvYuste/react-course-wishlist/issues"
+  },
+  "homepage": "https://github.com/AlvYuste/react-course-wishlist#readme"
+}
